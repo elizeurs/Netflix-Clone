@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7516A2242904945E00FA0319 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516A2232904945E00FA0319 /* HeroHeaderUIView.swift */; };
 		755361F0290347B100127FA9 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */; };
 		75C0DBB029020025007B98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBAF29020025007B98F6 /* AppDelegate.swift */; };
 		75C0DBB229020025007B98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBB129020025007B98F6 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7516A2232904945E00FA0319 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		75C0DBAC29020025007B98F6 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C0DBAF29020025007B98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */,
+				7516A2232904945E00FA0319 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				75C0DBC9290206CD007B98F6 /* SearchViewController.swift in Sources */,
 				75C0DBB429020025007B98F6 /* MainTabBarViewController.swift in Sources */,
 				755361F0290347B100127FA9 /* CollectionViewTableViewCell.swift in Sources */,
+				7516A2242904945E00FA0319 /* HeroHeaderUIView.swift in Sources */,
 				75C0DBCB2902070F007B98F6 /* DownloadsViewController.swift in Sources */,
 				75C0DBB029020025007B98F6 /* AppDelegate.swift in Sources */,
 				75C0DBB229020025007B98F6 /* SceneDelegate.swift in Sources */,
