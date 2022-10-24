@@ -7,6 +7,7 @@
 
 import Foundation
 
+// tv model is not necessary. same model as movie.
 struct TrendingTvResponse: Codable {
   let results: [Tv]
 }

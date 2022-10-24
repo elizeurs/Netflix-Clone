@@ -1,5 +1,6 @@
 //
-//  Movie.swift
+//  it was Movie.swift b4.
+//  Title.swift
 //  Netflix Clone
 //
 //  Created by Elizeu RS on 23/10/22.
@@ -7,11 +8,13 @@
 
 import Foundation
 
-struct TrendingMoviesResponse: Codable {
-  let results: [Movie]
+// it was TrendingMoviesResponse b4.
+struct TrendingTitleResponse: Codable {
+  let results: [Title]
 }
 
-struct Movie: Codable {
+// it was Movie b4.
+struct Title: Codable {
   let id: Int
   let media_type: String?
   let original_name: String?

@@ -21,7 +21,7 @@
 		75CD3F0229072BA900061FE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CD3F0129072BA900061FE7 /* Extensions.swift */; };
 		75CD3F042907351100061FE7 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CD3F032907351100061FE7 /* Tv.swift */; };
 		75DB52432905FD9400BFC15C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB52422905FD9400BFC15C /* APICaller.swift */; };
-		75DB524529060D2F00BFC15C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB524429060D2F00BFC15C /* Movie.swift */; };
+		75DB524529060D2F00BFC15C /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB524429060D2F00BFC15C /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		75CD3F0129072BA900061FE7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		75CD3F032907351100061FE7 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 		75DB52422905FD9400BFC15C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		75DB524429060D2F00BFC15C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		75DB524429060D2F00BFC15C /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 		755361EC2903475400127FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				75DB524429060D2F00BFC15C /* Movie.swift */,
+				75DB524429060D2F00BFC15C /* Title.swift */,
 				75CD3F032907351100061FE7 /* Tv.swift */,
 			);
 			path = Models;
@@ -222,7 +222,7 @@
 				75CD3F0229072BA900061FE7 /* Extensions.swift in Sources */,
 				75C0DBB229020025007B98F6 /* SceneDelegate.swift in Sources */,
 				75C0DBC729020692007B98F6 /* UpcomingViewController.swift in Sources */,
-				75DB524529060D2F00BFC15C /* Movie.swift in Sources */,
+				75DB524529060D2F00BFC15C /* Title.swift in Sources */,
 				75CD3F042907351100061FE7 /* Tv.swift in Sources */,
 				75C0DBC529020649007B98F6 /* HomeViewController.swift in Sources */,
 			);
