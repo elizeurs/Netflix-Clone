@@ -62,7 +62,8 @@ class APICaller {
       do {
 //        let results = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
         let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-        print(results)
+        completion(.success(results.results))
+//        print(results)
       } catch {
         completion(.failure(APIError.failedToGetData))
 //        print(error.localizedDescription)
@@ -81,7 +82,8 @@ class APICaller {
       
       do {
         let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-        print(results)
+        completion(.success(results.results))
+//        print(results)
       } catch {
         print(error.localizedDescription)
       }
@@ -99,7 +101,8 @@ class APICaller {
       
       do {
         let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-        print(results)
+        completion(.success(results.results))
+//        print(results)
       } catch {
         completion(.failure(APIError.failedToGetData))
 //        print(error.localizedDescription)
@@ -118,7 +121,8 @@ class APICaller {
       
       do {
         let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-        print(results)
+        completion(.success(results.results))
+//        print(results)
       } catch {
         completion(.failure(APIError.failedToGetData))
 //        print(error.localizedDescription)
