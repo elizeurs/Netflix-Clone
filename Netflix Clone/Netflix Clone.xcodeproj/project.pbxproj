@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7516A2242904945E00FA0319 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516A2232904945E00FA0319 /* HeroHeaderUIView.swift */; };
 		753ECC4F2908A695003EEEC7 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ECC4E2908A695003EEEC7 /* TitleTableViewCell.swift */; };
+		754FEB9C2909B2CE004E332D /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FEB9B2909B2CE004E332D /* TitleViewModel.swift */; };
 		755361F0290347B100127FA9 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */; };
 		75C0DBB029020025007B98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBAF29020025007B98F6 /* AppDelegate.swift */; };
 		75C0DBB229020025007B98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBB129020025007B98F6 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		7516A2232904945E00FA0319 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		753ECC4E2908A695003EEEC7 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		754FEB9B2909B2CE004E332D /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		75C0DBAC29020025007B98F6 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C0DBAF29020025007B98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		755361EA2903473300127FA9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				754FEB9B2909B2CE004E332D /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				753ECC4F2908A695003EEEC7 /* TitleTableViewCell.swift in Sources */,
 				75C0DBC729020692007B98F6 /* UpcomingViewController.swift in Sources */,
 				75DB524529060D2F00BFC15C /* Title.swift in Sources */,
+				754FEB9C2909B2CE004E332D /* TitleViewModel.swift in Sources */,
 				75CD3F042907351100061FE7 /* Tv.swift in Sources */,
 				75C0DBC529020649007B98F6 /* HomeViewController.swift in Sources */,
 			);
