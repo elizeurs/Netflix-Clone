@@ -9,9 +9,11 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
   
-  private var titles: [Title] = [Title]()
+  // change for "public", 'cause we want to access that from the SearchViewController. it was "private" b4.
+  public var titles: [Title] = [Title]()
   
-  private let searchResultsCollectionView: UICollectionView = {
+  // change to "public" as well.
+  public let searchResultsCollectionView: UICollectionView = {
     
     let layout = UICollectionViewFlowLayout()
     layout.itemSize = CGSize(width: UIScreen.main.bounds.width/3-10, height: 200)
@@ -40,7 +42,7 @@ class SearchResultsViewController: UIViewController {
 
 extension SearchResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return titles.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -48,7 +50,35 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
       return UICollectionViewCell()
     }
     
-    cell.backgroundColor = .systemBlue
+//    cell.backgroundColor = .systemBlue
+    let title = titles[indexPath.row]
+    cell.configure(with: title.poster_path ?? "")
     return cell
+  }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    let searchBar = searchController.searchBar
+    
+    guard let query = searchBar.text,
+    !query.trimmingCharacters(in: .whitespaces).isEmpty,
+    query.trimmingCharacters(in: .whitespaces).count >= 3,
+    let resultsController = searchController.searchResultsController as? SearchResultsViewController else {
+      return
+    }
+    
+    // we didn't have a [weak self], 'cause we're not using "self" over here.
+    APICaller.shared.search(with: query) { result in
+      DispatchQueue.main.async {
+        switch result {
+        case .success(let titles):
+          resultsController.titles = titles
+          resultsController.searchResultsCollectionView.reloadData()
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
+      }
+    }
   }
 }

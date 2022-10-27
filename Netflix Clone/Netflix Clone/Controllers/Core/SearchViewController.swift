@@ -40,6 +40,8 @@ class SearchViewController: UIViewController {
       
       navigationController?.navigationBar.tintColor = .white
       fetchDiscoverMovies()
+      
+      searchController.searchResultsUpdater = self
     }
   
   private func fetchDiscoverMovies() {
