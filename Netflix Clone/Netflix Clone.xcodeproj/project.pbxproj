@@ -11,6 +11,7 @@
 		753ECC4F2908A695003EEEC7 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ECC4E2908A695003EEEC7 /* TitleTableViewCell.swift */; };
 		754FEB9C2909B2CE004E332D /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FEB9B2909B2CE004E332D /* TitleViewModel.swift */; };
 		755361F0290347B100127FA9 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */; };
+		75AB6658290B2E3400063D40 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AB6657290B2E3400063D40 /* SearchResultsViewController.swift */; };
 		75C0DBB029020025007B98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBAF29020025007B98F6 /* AppDelegate.swift */; };
 		75C0DBB229020025007B98F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBB129020025007B98F6 /* SceneDelegate.swift */; };
 		75C0DBB429020025007B98F6 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0DBB329020025007B98F6 /* MainTabBarViewController.swift */; };
@@ -34,6 +35,7 @@
 		753ECC4E2908A695003EEEC7 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		754FEB9B2909B2CE004E332D /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		755361EF290347B100127FA9 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		75AB6657290B2E3400063D40 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		75C0DBAC29020025007B98F6 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C0DBAF29020025007B98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C0DBB129020025007B98F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,25 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		75AB6655290B2D2D00063D40 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				75C0DBC429020649007B98F6 /* HomeViewController.swift */,
+				75C0DBC629020692007B98F6 /* UpcomingViewController.swift */,
+				75C0DBC8290206CC007B98F6 /* SearchViewController.swift */,
+				75C0DBCA2902070F007B98F6 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		75AB6656290B2DC300063D40 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				75AB6657290B2E3400063D40 /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		75C0DBA329020025007B98F6 = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +168,8 @@
 		75C0DBC329020620007B98F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				75C0DBC429020649007B98F6 /* HomeViewController.swift */,
-				75C0DBC629020692007B98F6 /* UpcomingViewController.swift */,
-				75C0DBC8290206CC007B98F6 /* SearchViewController.swift */,
-				75C0DBCA2902070F007B98F6 /* DownloadsViewController.swift */,
+				75AB6656290B2DC300063D40 /* General */,
+				75AB6655290B2D2D00063D40 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C0DBC9290206CD007B98F6 /* SearchViewController.swift in Sources */,
+				75AB6658290B2E3400063D40 /* SearchResultsViewController.swift in Sources */,
 				75C0DBB429020025007B98F6 /* MainTabBarViewController.swift in Sources */,
 				755361F0290347B100127FA9 /* CollectionViewTableViewCell.swift in Sources */,
 				75DB52432905FD9400BFC15C /* APICaller.swift in Sources */,
