@@ -17,6 +17,9 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
   
+  private var randomTrendingMovie: Title?
+  private var headerView: HeroHeaderUIView?
+  
   let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
   
   private let homeFeedTable: UITableView = {
@@ -39,7 +42,7 @@ class HomeViewController: UIViewController {
       configureNavbar()
       
 //      homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
-      let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+      headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
       homeFeedTable.tableHeaderView = headerView
       
 //      navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
@@ -48,7 +51,24 @@ class HomeViewController: UIViewController {
 //      APICaller.shared.getMovie(with: "Harry potter") { result in
 //        //
 //      }
+      
+      configureHeroHeaderView()
     }
+  
+  private func configureHeroHeaderView() {
+    
+    APICaller.shared.getTrendingMovies { [weak self] result in
+      switch result {
+      case .success(let titles):
+        let selectedTitle = titles.randomElement()
+        
+        self?.randomTrendingMovie = selectedTitle
+        self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ??  ""))
+      case .failure(let error):
+        print(error.localizedDescription)
+      }
+    }
+  }
   
   private func configureNavbar() {
     var image = UIImage(named: "netflixLogo")
