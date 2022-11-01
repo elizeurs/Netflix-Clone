@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol SearchResultsViewControllerDelegate: AnyObject {
+  func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel)
+}
+
 class SearchResultsViewController: UIViewController {
   
   // change for "public", 'cause we want to access that from the SearchViewController. it was "private" b4.
   public var titles: [Title] = [Title]()
+  
+  public weak var delegate: SearchResultsViewControllerDelegate?
   
   // change to "public" as well.
   public let searchResultsCollectionView: UICollectionView = {
@@ -55,29 +61,18 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
     cell.configure(with: title.poster_path ?? "")
     return cell
   }
-}
-
-extension SearchViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    let searchBar = searchController.searchBar
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
     
-    guard let query = searchBar.text,
-    !query.trimmingCharacters(in: .whitespaces).isEmpty,
-    query.trimmingCharacters(in: .whitespaces).count >= 3,
-    let resultsController = searchController.searchResultsController as? SearchResultsViewController else {
-      return
-    }
-    
-    // we didn't have a [weak self], 'cause we're not using "self" over here.
-    APICaller.shared.search(with: query) { result in
-      DispatchQueue.main.async {
-        switch result {
-        case .success(let titles):
-          resultsController.titles = titles
-          resultsController.searchResultsCollectionView.reloadData()
-        case .failure(let error):
-          print(error.localizedDescription)
-        }
+    let title = titles[indexPath.row]
+    let titleName = title.original_title ?? ""
+    APICaller.shared.getMovie(with: titleName) { [weak self] result in
+      switch result {
+      case .success(let videoElement):
+        self?.delegate?.searchResultsViewControllerDidTapItem(TitlePreviewViewModel(title: title.original_title ?? "", youtubeView: videoElement, titleOverview: title.overview ?? ""))
+      case .failure(let error):
+        print(error.localizedDescription)
       }
     }
   }
